@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Po, The Dragon Warrior</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0f0f0f;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            color: #fff;
+            animation: slideIn 1s ease-in-out;
+        }
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            background-color: #1e1e1e;
+            padding: 50px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #ff7e5f;
+            font-size: 2.8em;
+            position: relative;
+            display: inline-block;
+        }
+        .section h2::after {
+            content: '';
+            width: 50px;
+            height: 5px;
+            background: #ff7e5f;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+        .section p, .section ul {
+            line-height: 1.8;
+            font-size: 1.2em;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            background: #333;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        .section ul li:hover {
+            background: #444;
+        }
+        .section ul li::before {
+            content: "🔥";
+            margin-right: 15px;
+            animation: bounce 1s infinite;
+        }
+        footer {
+            background-color: #121212;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #ff7e5f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #feb47b;
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Po, The Dragon Warrior</h1>
+    </header>
+
+    <div class="content">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Hey there! I'm Po, the Dragon Warrior. I'm passionate about kung fu, eating dumplings, and protecting the Valley of Peace. Trained by the legendary Master Shifu and part of the Furious Five, I live to defend my friends and uphold justice with a big smile and a bigger appetite!</p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="grid-container">
+                <div class="grid-item">Kung Fu Mastery</div>
+                <div class="grid-item">Chi Control</div>
+                <div class="grid-item">Legendary Belly Bump</div>
+                <div class="grid-item">Endless Enthusiasm</div>
+                <div class="grid-item">Epic Dumpling Eating</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <p>Check out some of my recent adventures and battles:</p>
+            <div class="grid-container">
+                <div class="grid-item">Defeated Tai Lung</div>
+                <div class="grid-item">Mastered Inner Peace</div>
+                <div class="grid-item">Vanquished Lord Shen</div>
+                <div class="grid-item">Saved the Valley from Kai</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Want to reach out? Connect with me through these channels:</p>
+            <ul>
+                <li><a href="mailto:po@kungfupanda.com">Email: po@kungfupanda.com</a></li>
+                <li><a href="https://www.linkedin.com/in/dragonwarriorpo" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/dragonwarriorpo" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/dragonwarriorpo" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Po, The Dragon Warrior. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
